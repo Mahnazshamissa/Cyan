@@ -6,11 +6,11 @@ import org.openqa.selenium.support.How;
 public class WebForm extends PageObject {
 
     /** The username. */
-    @FindBy(how= How.ID,using="Username")
+    @FindBy(how= How.ID,using="username")
     public WebElement txtUsername;
 
     /** The password textfield. */
-    @FindBy(how= How.ID,using="Password")
+    @FindBy(how= How.ID,using="password")
     public WebElement txtPassword;
 
     /** The button for signing in. */
@@ -29,10 +29,12 @@ public class WebForm extends PageObject {
 
     public void enterTxtUsername(WebElement txtUsername) {
         this.txtUsername = txtUsername;
+        txtUsername.sendKeys("tomsmith");
     }
 
     public void enterTxtPassword(WebElement txtPassword) {
         this.txtPassword = txtPassword;
+        txtPassword.sendKeys("SuperSecretPassword!");
     }
 
     public void pressSubmitButton() {
