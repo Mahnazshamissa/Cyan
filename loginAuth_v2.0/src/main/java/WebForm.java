@@ -4,8 +4,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class WebForm extends PageObject {
+
     /** The username. */
-    @FindBy(how= How.ID,using="Useername")
+    @FindBy(how= How.ID,using="Username")
     public WebElement txtUsername;
 
     /** The password textfield. */
@@ -13,7 +14,7 @@ public class WebForm extends PageObject {
     public WebElement txtPassword;
 
     /** The button for signing in. */
-    @FindBy(how= How.XPATH,using="//*[@id=\"login\"]/button/i")
+    @FindBy(how= How.XPATH,using="//button[@class='radius' and @type='submit']")
     public WebElement btnLogin;
 
     /** The label login error msg. */
@@ -24,6 +25,7 @@ public class WebForm extends PageObject {
     public WebForm(WebDriver driver){
         super(driver);
     }
+
 
     public void enterTxtUsername(WebElement txtUsername) {
         this.txtUsername = txtUsername;
@@ -36,4 +38,5 @@ public class WebForm extends PageObject {
     public void pressSubmitButton() {
         this.btnLogin.click();
     }
+
 }

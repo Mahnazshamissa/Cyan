@@ -10,15 +10,18 @@ public class TestPlan {
 
     @BeforeSuite
     public static void main(String[] args){
-        System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
+        //System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
+        System.setProperty("webdriver.chrome.driver", "/Users/mahnaz/Desktop/Cyan Login/LoginAuth/chromedriver.exe");
     }
 
     @Test(testName = "Submit a WebForm")
-    public static void submitForm() {
+    public static void submitForm(String username, String password) {
         driver.get(Utils.BASE_URL);
         WebForm webForm = new WebForm(driver);
         webForm.enterTxtUsername(webForm.txtUsername);
+        //driver.get("tomsmith");
         webForm.enterTxtPassword(webForm.txtPassword);
+        //driver.get("SuperSecretPassword!");
         webForm.pressSubmitButton();
 
     }
