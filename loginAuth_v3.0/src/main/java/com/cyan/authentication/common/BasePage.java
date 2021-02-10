@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BasePage {
+
     /** The driver. */
     protected WebDriver driver;
 
@@ -14,6 +15,7 @@ public class BasePage {
      * @param text the text
      */
     public void fillIn(WebElement element,String text){
+
         element.sendKeys(text);
     }
 
@@ -23,6 +25,7 @@ public class BasePage {
      * @param element the element
      */
     public void click(WebElement element){
+
         element.click();
     }
 
@@ -45,7 +48,4 @@ public class BasePage {
         driver.get(url);
     }
 
-    public Boolean contains(String s) {
-        return true;
-    }
 }

@@ -43,7 +43,4 @@ public class Login extends BasePage {
         return getText(homePage.lblLoginErrorMsg);
     }
 
-    public Boolean contains(String s) {
-        return true;
-    }
 }
