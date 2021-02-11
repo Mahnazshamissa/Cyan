@@ -23,7 +23,7 @@ public class LoginTest {
     }
 
     @Test
-    public void validUsernameAndValidPasswordLoginTest(){
+    public void validUsernameAndValidPasswordLoginTest() throws InterruptedException {
         Login login = new Login(driver);
         login.perform("tomsmith", "SuperSecretPassword!");
         Assert.assertTrue(login.getErrorMsg().contains("You logged into a secure area!"));
@@ -31,21 +31,21 @@ public class LoginTest {
 
 
 	@Test
-	public void validUsernameAndInvalidPasswordLoginTest(){
+	public void validUsernameAndInvalidPasswordLoginTest() throws InterruptedException {
 		Login login = new Login(driver);
 		login.perform(" tomsmith", "LowSecretPassword");
 		Assert.assertTrue(login.getErrorMsg().contains("Your username is invalid!"));
 		//Assert.assertTrue(login.getErrorMsg().contains("Your password is invalid!"));
-        //Test failed with errorMsg of password but passed with errorMsg of username !!!
+		//Test failed with errorMsg of password but passed with errorMsg of username !!!
 	}
 	@Test
-	public void invalidUsernameAndValidPasswordLoginTest(){
+	public void invalidUsernameAndValidPasswordLoginTest() throws InterruptedException {
 		Login login = new Login(driver);
 		login.perform("MaxMustermann", "SuperSecretPassword!");
 		Assert.assertTrue(login.getErrorMsg().contains("Your username is invalid!"));
 	}
 	@Test
-	public void invalidUsernameAndInvalidPasswordLoginTest(){
+	public void invalidUsernameAndInvalidPasswordLoginTest() throws InterruptedException {
 		Login login = new Login(driver);
 		login.perform("MaxMustermann", "LowSecretPassword");
 		Assert.assertTrue(login.getErrorMsg().contains("Your username is invalid!"));

@@ -27,11 +27,12 @@ public class Login extends BasePage {
      * @param username the username
      * @param password the password
      */
-    public void perform(String username, String password) {
+    public void perform(String username, String password) throws InterruptedException {
         openUrl("http://the-internet.herokuapp.com/login");
         fillIn(homePage.txtUsername, username);
         fillIn(homePage.txtPassword, password);
         click(homePage.btnLogin);
+        Thread.sleep(10000);
     }
 
     /**
