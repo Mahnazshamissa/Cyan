@@ -4,33 +4,31 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginStep {
-    @Given("I navigate to the login page")
-    public void iNavigateToTheLoginPage() {
+    
+    @Given("user navigates to http:\\/\\/the-internet.herokuapp.com\\/login")
+    public void userNavigatesToHttpTheInternetHerokuappComLogin() {
     }
 
-    @And("I enter the username and password")
-    public void iEnterTheUsernameAndPassword() {
+    @When("user logs in using Username as <username> and Password <password>")
+    public void userLogsInUsingUsernameAsUsernameAndPasswordPassword() {
     }
 
-    @And("I click on login button")
-    public void iClickOnLoginButton() {
+    @And("user enters the following for Login")
+    public void userEntersTheFollowingForLogin() {
     }
 
-    @Then("I should see the userform page")
-    public void iShouldSeeTheUserformPage() {
+    @And("user clicks on login button")
+    public void userClicksOnLoginButton() {
     }
 
-    @And("I enter the following for Login")
-    public void iEnterTheFollowingForLogin(DataTable table) {
-        table.row(0);
+    @Then("login should be successful")
+    public void loginShouldBeSuccessful() {
     }
 
-
-    @And("I enter <username> and <password>")
-    public void iEnterUsernameAndPassword() {
+    @Then("error message should throw")
+    public void errorMessageShouldThrow() {
     }
-
-
 }
