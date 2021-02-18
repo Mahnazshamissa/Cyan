@@ -38,6 +38,20 @@ public class SampleClientTest {
     @Test
     public void testRedirection() throws Exception{
 
+        //Specify base URI
+        RestAssured.baseURI= "http://the-internet.herokuapp.com/status_codes";
+
+        // Request object
+        RequestSpecification httpRequest = RestAssured.given();
+
+        // Response object
+        Response response = httpRequest.request(Method.GET, "status_codes/301");
+
+        //Status code validation
+        Assert.assertEquals(response.getContentType(),CustomHttpStatus.REDIRECTION);
+
+        System.out.println("Status code is: " + CustomClientErrorException.class);
+
     }
 
     /**
@@ -46,6 +60,20 @@ public class SampleClientTest {
      */
     @Test
     public void testNotFound() throws Exception{
+
+        //Specify base URI
+        RestAssured.baseURI= "http://the-internet.herokuapp.com/status_codes";
+
+        // Request object
+        RequestSpecification httpRequest = RestAssured.given();
+
+        // Response object
+        Response response = httpRequest.request(Method.GET, "status_codes/404");
+
+        //Status code validation
+        Assert.assertEquals(response.getContentType(),CustomHttpStatus.CLIENT_ERROR);
+
+        System.out.println("Status code is: " + CustomClientErrorException.class);
 
     }
 
@@ -58,6 +86,20 @@ public class SampleClientTest {
      */
     @Test
     public void testInternalServerError() throws Exception{
+
+        //Specify base URI
+        RestAssured.baseURI= "http://the-internet.herokuapp.com/status_codes";
+
+        // Request object
+        RequestSpecification httpRequest = RestAssured.given();
+
+        // Response object
+        Response response = httpRequest.request(Method.GET, "status_codes/500");
+
+        //Status code validation
+        Assert.assertEquals(response.getContentType(),CustomHttpStatus.SERVER_ERROR);
+
+        System.out.println("Status code is: " + CustomClientErrorException.class);
 
     }
 
