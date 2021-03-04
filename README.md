@@ -4,7 +4,9 @@ Implement the following test scenarios.
 
 - **Problem One - Form Authentication**
 
+
      http://the-internet.herokuapp.com/login
+     
 
    given this small sample form-login
 
@@ -13,7 +15,9 @@ Implement the following test scenarios.
 
 - **Problem Two - HTTP StatusCodes**
 
+
       http://the-internet.herokuapp.com/status_codes
+      
 
     given this page that can return multiple http statusCodes
 
@@ -22,7 +26,9 @@ Implement the following test scenarios.
 
 - **Problem Three - REST API**
 
+
       https://jsonplaceholder.typicode.com/users
+      
 
     given this rest api that returns a proper json response
 
@@ -62,5 +68,5 @@ You should use the following frameworks to solve the problems
 - Gherkin
 - Selenium Chromedriver
 - Maven
-- 
+
 You are free to add any other libraries you may need to add to solve the problems, the only restriction is that to run the example it is not necessary to configure/install third party software
