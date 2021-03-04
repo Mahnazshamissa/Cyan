@@ -1,5 +1,5 @@
-**Excercise:
-**
+ **Excercise:**
+
 Implement the following test scenarios.
 
 - **Problem One - Form Authentication**
@@ -54,8 +54,8 @@ Implement the following test scenarios.
 }
 
 
-**Frameworks:
-**You should use the following frameworks to solve the problems
+**Frameworks:**
+You should use the following frameworks to solve the problems
 
 - JDK8
 - Cuccumber
