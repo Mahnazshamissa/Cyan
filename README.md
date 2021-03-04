@@ -10,7 +10,7 @@ Implement the following test scenarios.
 
    given this small sample form-login
 
-   create positive and negative testcase(s) that verify the result of the login-attempt is correct
+   - create positive and negative testcase(s) that verify the result of the login-attempt is correct
 
 
 - **Problem Two - HTTP StatusCodes**
@@ -21,7 +21,7 @@ Implement the following test scenarios.
 
     given this page that can return multiple http statusCodes
 
-    verify that upon navigation to a certain page the correct http statusCode is returned
+    - verify that upon navigation to a certain page the correct http statusCode is returned
     
 
 - **Problem Three - REST API**
@@ -32,8 +32,8 @@ Implement the following test scenarios.
 
     given this rest api that returns a proper json response
 
-    verify that user Nicholas Runolfsdottir V exists
-    verify that if this user exists, his address contains the following data
+    - verify that user Nicholas Runolfsdottir V exists
+    - verify that if this user exists, his address contains the following data
 
     {
 	
